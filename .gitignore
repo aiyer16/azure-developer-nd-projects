@@ -128,3 +128,4 @@ dmypy.json
 azure-microservices/nd081-c2-Building-and-deploying-cloud-native-applications-from-scratch-project-starter-master
 *.DS_Store
 azure-microservices/NeighborlyApp/local.settings.json
+*.vscode
