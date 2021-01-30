@@ -1,5 +1,6 @@
 import azure.functions as func
 import pymongo
+import os
 from bson.objectid import ObjectId
 
 
