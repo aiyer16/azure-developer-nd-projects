@@ -1,12 +1,9 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
 flask = "*"
 requests = "*"
 flask-bootstrap = "*"
@@ -18,7 +15,6 @@ azure-cosmos = "*"
 pymongo = "*"
 azure-cli-core = "*"
 feedgen = "*"
-
+autopep8 = "*"
 
 [dev-packages]
-

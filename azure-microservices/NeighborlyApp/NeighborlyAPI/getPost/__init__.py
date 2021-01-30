@@ -4,15 +4,16 @@ import json
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 
+
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
     id = req.params.get('id')
 
     if id:
         try:
-            url = "localhost"  # TODO: Update with appropriate MongoDB connection information
+            url = os.environ['CosmosDbConnection']
             client = pymongo.MongoClient(url)
-            database = client['azure']
+            database = client['neighborlydb']
             collection = database['posts']
 
             query = {'_id': ObjectId(id)}
