@@ -1,3 +1,6 @@
+# Custom Ignore List
+azure-microservices/nd081-c2-Building-and-deploying-cloud-native-applications-from-scratch-project-starter-master
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
