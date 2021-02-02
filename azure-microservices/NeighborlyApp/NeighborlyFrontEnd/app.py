@@ -27,7 +27,7 @@ def feeds():
     response = requests.get(settings.API_URL + '/getAdvertisements')
     posts = response.json()
 
-    for key, value in posts.items():
+    for key, value in posts[0].items():
         print("key,value: " + key + ", " + value)
 
     #     feed.add(post.title,
@@ -49,11 +49,12 @@ def rss():
 
     response = requests.get(settings.API_URL + '/getAdvertisements')
     ads = response.json()
+    print(ads[0])
 
     for a in ads:
         fe = fg.add_entry()
-        fe.title(a.title)
-        fe.description(a.description)
+        fe.title(ads[0]['title'])
+        fe.description(ads[0]['description'])
 
     response = make_response(fg.rss_str())
     response.headers.set('Content-Type', 'application/rss+xml')
